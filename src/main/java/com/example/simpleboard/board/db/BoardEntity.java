@@ -1,9 +1,12 @@
 package com.example.simpleboard.board.db;
 
+import com.example.simpleboard.post.db.PostEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -27,4 +30,7 @@ public class BoardEntity {
     private String boardName;
 
     private String status;
+
+    @OneToMany(mappedBy = "board")
+    private List<PostEntity> postList = List.of();
 }

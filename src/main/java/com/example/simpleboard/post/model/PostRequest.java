@@ -21,6 +21,8 @@ import lombok.ToString;
 @JsonNaming(value = PropertyNamingStrategies.SnakeCaseStrategy.class)
 public class PostRequest {
 
+    private Long boardId = 1L; // 어떤 게시판에서 쓸지
+
     @NotBlank
     private String userName;
 
