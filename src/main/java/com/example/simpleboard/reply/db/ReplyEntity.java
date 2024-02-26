@@ -30,6 +30,8 @@ public class ReplyEntity {
 
     private String userName;
 
+    private String password;
+
     private String status;
 
     private String title;
