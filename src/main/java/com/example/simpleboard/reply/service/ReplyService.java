@@ -1,8 +1,8 @@
-package com.example.simpleboard.reply.db.service;
+package com.example.simpleboard.reply.service;
 
 import com.example.simpleboard.reply.db.ReplyEntity;
 import com.example.simpleboard.reply.db.ReplyRepository;
-import com.example.simpleboard.reply.db.model.ReplyRequest;
+import com.example.simpleboard.reply.model.ReplyRequest;
 import java.time.LocalDateTime;
 import java.util.List;
 import lombok.RequiredArgsConstructor;

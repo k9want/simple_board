@@ -1,4 +1,4 @@
-package com.example.simpleboard.post.db.model;
+package com.example.simpleboard.post.model;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;

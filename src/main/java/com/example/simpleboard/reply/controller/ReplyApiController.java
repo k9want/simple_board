@@ -1,8 +1,8 @@
-package com.example.simpleboard.reply.db.controller;
+package com.example.simpleboard.reply.controller;
 
 import com.example.simpleboard.reply.db.ReplyEntity;
-import com.example.simpleboard.reply.db.model.ReplyRequest;
-import com.example.simpleboard.reply.db.service.ReplyService;
+import com.example.simpleboard.reply.model.ReplyRequest;
+import com.example.simpleboard.reply.service.ReplyService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;

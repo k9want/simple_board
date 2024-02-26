@@ -1,11 +1,11 @@
-package com.example.simpleboard.post.db.service;
+package com.example.simpleboard.post.service;
 
 import com.example.simpleboard.post.db.PostEntity;
 import com.example.simpleboard.post.db.PostRepository;
-import com.example.simpleboard.post.db.model.PostRequest;
-import com.example.simpleboard.post.db.model.PostViewRequest;
+import com.example.simpleboard.post.model.PostRequest;
+import com.example.simpleboard.post.model.PostViewRequest;
 import com.example.simpleboard.reply.db.ReplyEntity;
-import com.example.simpleboard.reply.db.service.ReplyService;
+import com.example.simpleboard.reply.service.ReplyService;
 import java.time.LocalDateTime;
 import java.util.List;
 import lombok.RequiredArgsConstructor;

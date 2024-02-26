@@ -1,9 +1,9 @@
-package com.example.simpleboard.post.db.controller;
+package com.example.simpleboard.post.controller;
 
 import com.example.simpleboard.post.db.PostEntity;
-import com.example.simpleboard.post.db.model.PostRequest;
-import com.example.simpleboard.post.db.model.PostViewRequest;
-import com.example.simpleboard.post.db.service.PostService;
+import com.example.simpleboard.post.model.PostRequest;
+import com.example.simpleboard.post.model.PostViewRequest;
+import com.example.simpleboard.post.service.PostService;
 import jakarta.validation.Valid;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
