@@ -4,6 +4,8 @@ import com.example.simpleboard.post.db.PostEntity;
 import com.example.simpleboard.post.db.PostRepository;
 import com.example.simpleboard.post.db.model.PostRequest;
 import com.example.simpleboard.post.db.model.PostViewRequest;
+import com.example.simpleboard.reply.db.ReplyEntity;
+import com.example.simpleboard.reply.db.service.ReplyService;
 import java.time.LocalDateTime;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
@@ -14,6 +16,7 @@ import org.springframework.stereotype.Service;
 public class PostService {
 
     private final PostRepository postRepository;
+    private final ReplyService replyService;
 
     public PostEntity save(PostRequest postRequest) {
         PostEntity entity = PostEntity.builder()
@@ -44,6 +47,10 @@ public class PostService {
                         throw new RuntimeException(
                                 String.format(format, it.getPassword(), postViewRequest.getPassword()));
                     }
+
+                    // 게시글의 답변도 가져오기
+                    List<ReplyEntity> replyList = replyService.findAllByPostId(it.getId());
+                    it.setReplyList(replyList);
                     return it;
 
                 }).orElseThrow(
