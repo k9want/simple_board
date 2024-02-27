@@ -108,13 +108,13 @@ JPA는 개발자로 하여금 SQL을 직접 작성하는 대신 객체 모델을
 
 #### 해결방안
 
-- [**@JsonIgnore, @ToString.Exclude 어노테이션 사용
-  **:](https://github.com/k9want/simple_board/commit/5fc8109adec4c7fc887b5f02e95f51c237b4266a)
+- [@JsonIgnore, @ToString.Exclude 어노테이션 사용
+  :](https://github.com/k9want/simple_board/commit/5fc8109adec4c7fc887b5f02e95f51c237b4266a)
     - 해당 어노테이션들을 사용하여 엔티티의 특정 필드가 JSON 직렬화나 toString() 메소드 호출에서 제외되도록 설정함으로써 무한 반복 문제를 해결할 수 있습니다.
     - @JsonIgnore는 JSON 직렬화 시 특정 필드를 무시하게 하고, @ToString.Exclude는 toString() 메소드에서 특정 필드를 제외시킵니다.
 
-- [**✨DTO(Data Transfer Object) 사용
-  **:](https://github.com/k9want/simple_board/commit/36267a78c8ebb5dc77e264660793fe939d635b1a)
+- [✨DTO(Data Transfer Object) 사용
+  :](https://github.com/k9want/simple_board/commit/36267a78c8ebb5dc77e264660793fe939d635b1a)
     - API 응답으로 엔티티를 직접 반환하지 않고, 엔티티와 상응하는 DTO를 만들어서 반환하는 방법을 사용합니다.
     - DTO는 클라이언트에 전송될 데이터의 구조를 정의하는 객체로, 엔티티의 데이터를 필요한 형태로 가공하여 JSON 직렬화 문제와 무한 반복 문제를 예방할 수 있습니다.
 
