@@ -8,7 +8,13 @@
 
 #### [POST] /api/post - 게시글 작성
 
-#### [GET] /api/post/all - 게시판의 게시글 전체 조회
+#### [GET] /api/post/all - 게시판의 게시글 전체 조회 (1)
+
+#### [[GET] /api/post/all?page=?&size=? 페이지네이션 적용 - 게시판의 게시글 전체 조회(2)](https://github.com/k9want/simple_board/commit/9477bc3a705668d80eec54b8aa772d91e9d80adc)
+
+- pagination [request] index(=page), size [response] - total, total element, current element
+- page, size, currentElements, totalPage, totalElement
+- ex) @PageableDefault(page = 0, size = 10, sort = "id", direction = Direction.DESC) Pageable pageable
 
 #### [[POST] /api/post/view - 게시글 상세보기 (1)](https://github.com/k9want/simple_board/blob/39c6e2d68f8cc37aa95809b0a9c2a69889d8ad39/src/main/java/com/example/simpleboard/post/db/service/PostService.java)
 
