@@ -9,7 +9,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Transient;
+import jakarta.persistence.OneToMany;
 import java.time.LocalDateTime;
 import java.util.List;
 import lombok.AllArgsConstructor;
@@ -53,6 +53,7 @@ public class PostEntity {
 
     private LocalDateTime postedAt;
 
-    @Transient
+    @OneToMany(mappedBy = "post")
+    @Builder.Default
     private List<ReplyEntity> replyList = List.of();
 }

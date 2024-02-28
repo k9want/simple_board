@@ -13,6 +13,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import org.hibernate.annotations.Where;
 
 @Getter
 @Setter
@@ -32,5 +33,8 @@ public class BoardEntity {
     private String status;
 
     @OneToMany(mappedBy = "board")
+    @Builder.Default
+    @Where(clause = "status = 'REGISTERED'")
+    @org.hibernate.annotations.OrderBy(clause = "id desc")
     private List<PostEntity> postList = List.of();
 }
