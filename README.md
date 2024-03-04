@@ -216,3 +216,16 @@ JPA는 개발자로 하여금 SQL을 직접 작성하는 대신 객체 모델을
 - DTO를 사용하면 엔티티의 구조 변경이 뷰에 미치는 영향을 최소화하고, 데이터 노출을 효과적으로 관리할 수 있습니다.
 
 ---
+
+### 기본 CRUD 추상화해보기
+
+- CRUDInterface (CRUD)
+- Converter (toDto, toEntity)
+- CRUDAbstractService implements CRUDInterface
+    - dto -> entity (converter 필요 - 인터페이스로 구현)
+    - entity -> save
+    - save -> dto
+- CRUDApiAbstractController implements CRUDInterface
+
+
+
