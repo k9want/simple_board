@@ -82,7 +82,7 @@ public class PostService {
                 .page(list.getNumber())
                 .size(list.getSize())
                 .currentElements(list.getNumberOfElements())
-                .totalElement(list.getTotalElements())
+                .totalElements(list.getTotalElements())
                 .totalPage(list.getTotalPages())
                 .build();
 

@@ -23,5 +23,5 @@ public class Pagination {
 
     private Integer totalPage; // 총 페이지
 
-    private Long totalElement; // 전체 element
+    private Long totalElements; // 전체 element
 }
